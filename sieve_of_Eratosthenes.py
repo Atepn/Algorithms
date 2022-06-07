@@ -8,4 +8,3 @@ def is_prime_number(N):
             for j in range(2*i, N+1, i):
                 nlist[j] = False
     return nlist[N]
-print(is_prime_number(11))
