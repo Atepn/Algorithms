@@ -3,7 +3,6 @@ def is_prime_number(N):
     if N < 2:
         return False
     nlist = [True]*(N+1)
-    # nlist[0] = nlist[1] = False
     for i in range(2, N+1):
         if nlist[i]:
             for j in range(2*i, N+1, i):
