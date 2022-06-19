@@ -28,3 +28,14 @@ def hanois_towers(a, b, n = 0,  tmp =[]):
     b.append(a[len(a)-1])
     a.pop()
     hanois_towers(tmp, b, a, n-1)
+
+def gen_num(n:int, m:int, prefix = []):
+    if m == 0:
+        print(prefix)
+        return
+    for digit in range(n):
+        prefix.append(digit)
+        gen_num(n, m-1, prefix)
+        prefix.pop()
+
+gen_num(4, 3)
